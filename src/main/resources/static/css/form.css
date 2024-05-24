@@ -1,0 +1,46 @@
+
+.form-box {
+    background-color: #f2f2f2;
+    border: 1px solid #dddddd;
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    width: 400px;
+    margin: 20px auto; /* 상하 마진 20, 좌우 자동설정*/
+    padding: 20px;
+}
+
+.form-box input,
+.form-box textarea {
+    border-radius: 4px;
+    padding: 5px 0;
+    margin-top: 10px;
+    width: 100%; /* 버튼의 너비를 부모 요소인 폼 박스와 같이 설정 */
+    border: 1px solid darkgray; /* 얇은 실선 경계선 추가 */
+}
+
+
+.form-box input[type="submit"] {
+    background-color: #4CAF50; /* 초록색 배경 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin-top: 10px; /* form-box와의 간격 */
+    width: 100%; /* 버튼의 너비를 부모 요소인 폼 박스와 같이 설정 */
+
+}
+
+.form-box textarea {
+    height: 200px; /* 높이 설정 */
+}
+
+div{
+    margin-top: 10px;
+}
+
+label{
+    font-weight: 600; /*폰트 두께 조절*/
+}
+
+.error-message {
+    color:red;
+}

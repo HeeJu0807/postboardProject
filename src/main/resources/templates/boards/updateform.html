@@ -1,0 +1,37 @@
+<!-- updateform.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 수정폼</title>
+    <link rel="stylesheet" th:href="@{/css/form.css}">
+
+</head>
+<body>
+<div class="form-box">
+<h1>Update Board</h1>
+<form th:action="@{/update}" th:object="${board}" method="post">
+    <input type="hidden" id="id" th:field="*{id}"/>
+    <div>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" th:field="*{name}" required/><br>
+    </div>
+    <div>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" th:field="*{title}" required/><br>
+    </div>
+    <div>
+        <label for="content">Content:</label><br>
+        <textarea id="content" th:field="*{content}" required></textarea><br>
+    </div>
+    <div>
+        <label for="password">Password (for verification):</label><br>
+        <input type="password" id="password" name="password" required/><br>
+        <span th:if="${errorMessage}" th:text="${errorMessage}" class="error-message"></span> <!-- 에러 메시지 표시 -->
+
+    </div>
+    <input type="submit" value="Update"/>
+</form>
+</div>
+</body>
+</html>
